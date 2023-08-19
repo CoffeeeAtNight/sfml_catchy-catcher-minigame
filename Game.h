@@ -19,7 +19,6 @@ private:
 
     Player m_player;
 
-    // Other game-related variables and classes...
 };
 
 #endif // GAME_HPP

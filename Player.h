@@ -16,9 +16,10 @@ public:
 	void draw(sf::RenderWindow& window);
 	void move(MoveDirection& direction);
 private:
-	const sf::Vector2f playerSize = { 20.0f, 50.0f };
-	sf::Vector2f startPositionXY = { 450.0f, 450.0f };
+	const sf::Vector2f playerSize = { 50.0f, 10.0f };
+	sf::Vector2f startPositionXY = { 450.0f, 500.0f };
 	float positionXOffset = 0.0f;
+	float playerPositionX = startPositionXY.x;
 	sf::Color playerColor = sf::Color::Magenta;
 	sf::RectangleShape playerShape;
 };

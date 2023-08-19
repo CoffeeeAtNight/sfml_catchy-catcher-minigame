@@ -2,8 +2,7 @@
 #include "Player.h"
 #include "SFML/Graphics.hpp"
 
-Game::Game() : m_window(sf::VideoMode(900, 600), "Catchy Catcher"), m_player() {
-}
+Game::Game() : m_window(sf::VideoMode(900, 600), "Catchy Catcher"), m_player() {}
 
 void Game::run() {
     while (m_window.isOpen()) {
