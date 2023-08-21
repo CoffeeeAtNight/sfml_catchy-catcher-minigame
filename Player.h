@@ -5,8 +5,6 @@
 #include <vector>
 #include "SFML/Graphics.hpp"
 
-enum MoveDirection { LEFT, RIGHT };
-
 class Player
 {
 public:
@@ -14,7 +12,7 @@ public:
 	Player(float initalX, float initalY);
 	void update(sf::Time deltaTime);
 	void draw(sf::RenderWindow& window);
-	void move(MoveDirection& direction);
+	void move(sf::Time deltaTime);
 private:
 	const sf::Vector2f playerSize = { 50.0f, 10.0f };
 	sf::Vector2f startPositionXY = { 450.0f, 500.0f };

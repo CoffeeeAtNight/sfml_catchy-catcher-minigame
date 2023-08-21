@@ -12,10 +12,7 @@ Player::Player() {
 };
 Player::Player(float initalX, float initalY) : startPositionXY(initalX, initalY) {};
 
-void Player::move(MoveDirection& direction) {
-}
-
-void Player::update(sf::Time deltaTime) {
+void Player::move(sf::Time deltaTime) {
 	float moveDistance = P_MOV * deltaTime.asSeconds();
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
@@ -31,6 +28,10 @@ void Player::update(sf::Time deltaTime) {
 		printf("Moved right: %f\n", playerPositionX - moveDistance);
 		playerShape.move(moveDistance, 0.0f);
 	}
+}
+
+void Player::update(sf::Time deltaTime) {
+	move(deltaTime);
 }
 
 void Player::draw(sf::RenderWindow& window) {
