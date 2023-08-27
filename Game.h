@@ -19,7 +19,8 @@ private:
     sf::RenderWindow m_window;
     sf::Clock m_clock;
 
-    int gameScore;
+    sf::Font font;
+    sf::Text scoreDisplayText;
 
     Player m_player;
     std::vector<std::unique_ptr<FallingGameObj>> listOfFallingObjects;

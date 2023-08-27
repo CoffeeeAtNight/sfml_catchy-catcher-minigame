@@ -1,11 +1,10 @@
 #pragma once
-
-enum Color { RED, BLUE, GREEN, PINK };
+#include <SFML/Graphics.hpp>
 
 class Utility
 {
 public:
-	Color getRandomColor();
+	sf::Color getRandomColor();
 	int getRandomInt(const int& fromInt, const int& toInt);
 };
 

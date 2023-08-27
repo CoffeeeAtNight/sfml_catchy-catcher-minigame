@@ -6,16 +6,9 @@
 #define MOV_OBJ 150.0f
 
 FallingGameObj::FallingGameObj() {
-	Color randColor = util.getRandomColor();
-
-	switch (randColor)
-	{
-		case RED: FallingGameObj::color = sf::Color::Red;
-		case BLUE: FallingGameObj::color = sf::Color::Blue;
-		case GREEN: FallingGameObj::color = sf::Color::Green;
-		case PINK: FallingGameObj::color = sf::Color::Cyan;
-	}
-
+	sf::Color randColor = util.getRandomColor();
+	
+	FallingGameObj::color = randColor;
 	FallingGameObj::size.x = util.getRandomInt(10, 40);
 	FallingGameObj::size.y = util.getRandomInt(10, 40);
 
@@ -30,6 +23,11 @@ void FallingGameObj::draw(sf::RenderWindow& window) {
 
 void FallingGameObj::update(sf::Time deltaTime) {
 	move(deltaTime);
+	position = objShape.getPosition();
+
+	if (position.y > 900) {
+		markForRemoval = true;
+	}
 }
 
 void FallingGameObj::move(sf::Time deltaTime) {

@@ -15,6 +15,7 @@ public:
 
 	sf::Vector2f position;
 	sf::RectangleShape objShape;
+	bool markForRemoval = false;
 
 private:
 	sf::Color color;

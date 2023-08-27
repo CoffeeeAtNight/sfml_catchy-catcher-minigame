@@ -18,14 +18,14 @@ void Player::move(sf::Time deltaTime) {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
 		if (playerPositionX - moveDistance <= 0) return;
 		playerPositionX -= moveDistance;
-		printf("Moved left: %f\n", playerPositionX - moveDistance);
+		//printf("Moved left: %f\n", playerPositionX - moveDistance);
 		playerShape.move(-moveDistance, 0.0f);
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
 		if (playerPositionX + moveDistance >= SCREEN_WIDTH) return;
 		playerPositionX += moveDistance;
-		printf("Moved right: %f\n", playerPositionX - moveDistance);
+		//printf("Moved right: %f\n", playerPositionX - moveDistance);
 		playerShape.move(moveDistance, 0.0f);
 	}
 }

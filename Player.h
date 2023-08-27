@@ -14,7 +14,7 @@ public:
 	void draw(sf::RenderWindow& window);
 	void move(sf::Time deltaTime);
 private:
-	const sf::Vector2f playerSize = { 50.0f, 10.0f };
+	const sf::Vector2f playerSize = { 60.0f, 8.0f };
 	sf::Vector2f startPositionXY = { 450.0f, 500.0f };
 	float positionXOffset = 0.0f;
 	float playerPositionX = startPositionXY.x;
